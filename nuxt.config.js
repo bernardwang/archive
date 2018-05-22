@@ -13,7 +13,7 @@ module.exports = {
       {
         hid: "description",
         name: "description",
-        content: "Archive of Bernard Wang's Personal Sites"
+        content: "An archive of Bernard Wang's Personal Sites"
       }
     ],
     link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }]
@@ -46,6 +46,6 @@ module.exports = {
       new webpack.ProvidePlugin({
         _: "lodash"
       })
-    ]
+    ],
   }
 }

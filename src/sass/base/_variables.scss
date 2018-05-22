@@ -1,0 +1,31 @@
+// Typefaces
+$primary-typeface: 'Courier New', 'Courier', 'Lucida Typewriter', monospace;
+
+// Colors
+$cl-white: #ffffff;
+
+$cl-text-primary: #000000;
+$cl-text-secondary: #0000EE;
+$cl-text-accent: #f5bdfb;
+
+$cl-bg-primary: #f5bdfb;
+$cl-bg-secondary: #f5bdfb;
+
+// Breakpoints
+$bp-large: 65rem;
+$bp-medium: 55rem;
+$bp-small: 30rem;
+
+// Transistion times
+$time-fast: 0.3s;
+$time-normal: 0.5s;
+$time-slow: 1s;
+
+// Z-index values
+$z-lowest: -99;
+$z-neg-second: -2;
+$z-neg-first: -1;
+$z-base: 0;
+$z-first: 1;
+$z-second: 2;
+$z-highest: 99;

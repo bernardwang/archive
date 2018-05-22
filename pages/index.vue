@@ -1,65 +1,38 @@
 <template>
-  <section class="container">
-    <div>
-      <app-logo/>
-      <h1 class="title">
-        archive
-      </h1>
-      <h2 class="subtitle">
-        Nuxt.js project
-      </h2>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          class="button--green">Documentation</a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          class="button--grey">GitHub</a>
-      </div>
-    </div>
-  </section>
+  <div id="app" class="app">
+    <Window/>
+    <div class="test"/>
+  </div>
 </template>
 
 <script>
-import AppLogo from "~/components/AppLogo.vue"
+import Window from "~/components/Window.vue"
 
 export default {
-  components: {
-    AppLogo
-  }
+  components: { Window }
 }
 </script>
 
-<style>
-.container {
+<style scoped lang="scss">
+@import "~/src/sass/main.scss";
+
+.app {
+  position: relative;
+  width: 100%;
   min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
 }
-
-.title {
-  font-family: "Quicksand", "Source Sans Pro", -apple-system, BlinkMacSystemFont,
-    "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; /* 1 */
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
-}
-
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
-
-.links {
-  padding-top: 15px;
+// TODO: remove this temporary hack
+.test {
+  background: $cl-bg-primary;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: $z-lowest;
 }
 </style>

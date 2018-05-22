@@ -1,0 +1,26 @@
+#app {
+  font-family: $primary-typeface;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 1em 0 0.5em 0;
+  font-weight: 400;
+  line-height: 1.4;
+  font-family: $primary-typeface;
+}
+
+// 1.414 type scale
+h1 { font-size: 4rem; }
+h2 { font-size: 2.83rem; }
+h3 { font-size: 2rem; }
+h4 { font-size: 1.414rem; }
+h5 { font-size: 1rem; }
+h6 { font-size: 0.7rem; }
+p {
+  font-size: 1rem;
+}
+button {
+  font-family: $primary-typeface;
+}
