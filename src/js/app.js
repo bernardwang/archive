@@ -1,5 +1,3 @@
-import 'babel-polyfill';
+import "babel-polyfill"
 
-global.app = function () {
-
-};
+global.app = function() {}

@@ -39,3 +39,9 @@ Thumbs.db
 # Node dependancy directory
 node_modules
 /.publish/
+
+# Nuxt build
+.nuxt
+
+# Nuxt generate
+dist
