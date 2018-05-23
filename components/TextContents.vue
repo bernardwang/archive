@@ -1,10 +1,28 @@
 <template>
-  <BannerSection title="Contents">
+  <BannerSection id="contents" title="Contents">
     <nav class="section-content">
-      <ul class="contents-nav-menu">
+      <ul class="contents-nav-main">
         <li class="contents-nav-item">
           <h4 class="contents-nav-num">
             [1]
+          </h4>
+          <router-link class="contents-nav-link" to="#about">
+            About
+          </router-link>
+        </li>
+        <li class="contents-nav-item">
+          <h4 class="contents-nav-num">
+            [2]
+          </h4>
+          <router-link class="contents-nav-link" to="#sites">
+            Sites
+          </router-link>
+        </li>
+      </ul>
+      <ul class="contents-nav-sub">
+        <li class="contents-nav-item">
+          <h4 class="contents-nav-num">
+            [a]
           </h4>
           <router-link class="contents-nav-link" to="#hibiscus">
             Hibiscus (2017 - present)
@@ -12,7 +30,7 @@
         </li>
         <li class="contents-nav-item">
           <h4 class="contents-nav-num">
-            [2]
+            [b]
           </h4>
           <router-link class="contents-nav-link" to="#stars">
             Stars (2015 - 2017)
@@ -20,7 +38,7 @@
         </li>
         <li class="contents-nav-item">
           <h4 class="contents-nav-num">
-            [3]
+            [c]
           </h4>
           <router-link class="contents-nav-link" to="#paper">
             Paper (2014)
@@ -28,7 +46,7 @@
         </li>
         <li class="contents-nav-item">
           <h4 class="contents-nav-num">
-            [4]
+            [d]
           </h4>
           <router-link class="contents-nav-link" to="#bubble">
             Bubble (2013)
@@ -50,23 +68,20 @@ export default {
 
 <style scoped lang="scss">
 @import "~/src/sass/main.scss";
-.contents-nav-menu {
+.contents-nav-main {
   width: 100%;
+}
+.contents-nav-sub {
+  width: 100%;
+  margin-left: 3rem;
 }
 .contents-nav-item {
   width: 100%;
-  margin-bottom: 1rem;
   display: flex;
   justify-content: flex-start;
   align-items: center;
 }
 .contents-nav-num {
   margin-right: 1rem;
-}
-.contents-nav-link {
-  &:hover {
-    text-decoration: underline;
-    color: $cl-text-secondary;
-  }
 }
 </style>

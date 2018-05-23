@@ -1,19 +1,21 @@
 <template>
   <main class="root-text">
     <TextIntro/>
-    <TextAbout/>
     <TextContents/>
+    <TextAbout/>
+    <TextSites/>
   </main>
 </template>
 
 <script>
 import TextIntro from "~/components/TextIntro.vue"
-import TextAbout from "~/components/TextAbout.vue"
 import TextContents from "~/components/TextContents.vue"
+import TextAbout from "~/components/TextAbout.vue"
+import TextSites from "~/components/TextSites.vue"
 
 export default {
   name: "EditorText",
-  components: { TextIntro, TextAbout, TextContents }
+  components: { TextIntro, TextContents, TextAbout, TextSites }
 }
 </script>
 

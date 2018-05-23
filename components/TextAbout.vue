@@ -1,7 +1,7 @@
 <template>
-  <BannerSection title="About">
+  <BannerSection id="about" title="About">
     <article class="section-content">
-      <pre class="about-ascii">
+      <pre class="ascii">
        .........
      .'------.' |
     | .-----. | |
@@ -34,13 +34,6 @@ export default {
 
 <style scoped lang="scss">
 @import "~/src/sass/main.scss";
-
-.about-ascii {
-  line-height: 0.8;
-  letter-spacing: -1px;
-  word-spacing: 0px;
-  font-size: 1rem;
-}
 .about-desc {
   margin-top: 1rem;
 }

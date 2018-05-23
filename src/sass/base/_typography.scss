@@ -31,3 +31,7 @@ p { font-size: 1rem; }
 button {
   font-family: $primary-typeface;
 }
+
+a:hover {
+  color: $cl-text-secondary;
+}

@@ -1,6 +1,6 @@
 <template>
   <header class="root-intro">
-    <pre class="intro-ascii">
+    <pre class="ascii">
                                ,---,
                              ,--.' |      ,--,
               __  ,-.        |  |  :    ,--.'|
@@ -40,12 +40,6 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-.intro-ascii {
-  line-height: 0.8;
-  letter-spacing: -1px;
-  word-spacing: 0px;
-  font-size: 1rem;
 }
 .intro-title {
   margin-top: 1rem;
