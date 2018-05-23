@@ -65,13 +65,13 @@ export default {
   justify-content: flex-start;
 }
 .panel-btns {
-  margin-left: 0.4rem;
+  margin-left: 0.3rem;
   display: flex;
   justify-content: flex-start;
 }
 .panel-btn {
-  width: 30px;
-  height: 30px;
+  width: 27px;
+  height: 27px;
   margin-left: 2px;
   padding: 0;
   border: none;

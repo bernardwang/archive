@@ -20,8 +20,7 @@ export default {
 
 .root-window {
   position: relative;
-  width: 40vw;
-  min-width: 30rem;
+  width: 45rem;
   padding: 0.75rem;
   padding-top: 0;
   background-color: $cl-white;

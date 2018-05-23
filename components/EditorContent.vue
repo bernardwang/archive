@@ -1,14 +1,15 @@
 <template>
   <main class="root-content">
-    <header>
-      article
-    </header>
+    <ContentIntro/>
   </main>
 </template>
 
 <script>
+import ContentIntro from "~/components/ContentIntro.vue"
+
 export default {
-  name: "EditorContent"
+  name: "EditorContent",
+  components: { ContentIntro }
 }
 </script>
 

@@ -23,7 +23,7 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
-  text-align: center;
+  font-family: $primary-typeface;
 }
 // TODO: remove this temporary hack
 .test {
