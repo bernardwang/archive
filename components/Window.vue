@@ -25,6 +25,12 @@ export default {
   padding-top: 0;
   background-color: $cl-white;
 
+  @include breakpoint(medium) {
+    padding: 0;
+    width: 95vw;
+    height: 95vh;
+  }
+
   &:before {
     content: "";
     position: absolute;

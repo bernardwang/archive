@@ -36,7 +36,10 @@ export default {
   overflow-x: hidden;
   margin-top: 1px;
   padding: 0.75rem;
-  max-height: 75vh;
+  height: 75vh;
+  @include breakpoint(medium) {
+    height: 84vh;
+  }
 }
 .root-text::-webkit-scrollbar {
   width: 1.2rem;
