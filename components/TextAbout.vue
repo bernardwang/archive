@@ -1,10 +1,6 @@
 <template>
-  <section class="root-about">
-    <h2 class="about-banner">
-      ===========================================================<br>About<br>
-      ===========================================================
-    </h2>
-    <article class="about-article">
+  <BannerSection title="About">
+    <article class="section-content">
       <pre class="about-ascii">
        .........
      .'------.' |
@@ -24,32 +20,21 @@
         In a way, this is also a silly way to track my progress as a developer and designer. Have fun!
       </p>
     </article>
-  </section>
+  </BannerSection>
 </template>
 
 <script>
+import BannerSection from "~/components/BannerSection.vue"
+
 export default {
-  name: "TextAbout"
+  name: "TextAbout",
+  components: { BannerSection }
 }
 </script>
 
 <style scoped lang="scss">
 @import "~/src/sass/main.scss";
 
-.root-about {
-  padding-top: 4rem;
-}
-.about-banner {
-  margin-bottom: 3rem;
-  text-align: center;
-}
-.about-article {
-  width: 100%;
-  padding-left: 1rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
 .about-ascii {
   line-height: 0.8;
   letter-spacing: -1px;

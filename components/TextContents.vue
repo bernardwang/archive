@@ -1,10 +1,6 @@
 <template>
-  <section class="root-contents">
-    <h2 class="contents-banner">
-      ===========================================================<br>Contents<br>
-      ===========================================================
-    </h2>
-    <nav class="contents-nav">
+  <BannerSection title="Contents">
+    <nav class="section-content">
       <ul class="contents-nav-menu">
         <li class="contents-nav-item">
           <h4 class="contents-nav-num">
@@ -40,32 +36,20 @@
         </li>
       </ul>
     </nav>
-  </section>
+  </BannerSection>
 </template>
 
 <script>
+import BannerSection from "~/components/BannerSection.vue"
+
 export default {
-  name: "TextContents"
+  name: "TextContents",
+  components: { BannerSection }
 }
 </script>
 
 <style scoped lang="scss">
 @import "~/src/sass/main.scss";
-
-.root-contents {
-  padding-top: 4rem;
-}
-.contents-banner {
-  margin-bottom: 3rem;
-  text-align: center;
-}
-.contents-nav {
-  width: 100%;
-  padding-left: 1rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
 .contents-nav-menu {
   width: 100%;
 }
