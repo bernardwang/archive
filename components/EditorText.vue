@@ -1,24 +1,26 @@
 <template>
-  <main class="root-content">
-    <ContentIntro/>
-    <ContentAbout/>
+  <main class="root-text">
+    <TextIntro/>
+    <TextAbout/>
+    <TextContents/>
   </main>
 </template>
 
 <script>
-import ContentIntro from "~/components/ContentIntro.vue"
-import ContentAbout from "~/components/ContentAbout.vue"
+import TextIntro from "~/components/TextIntro.vue"
+import TextAbout from "~/components/TextAbout.vue"
+import TextContents from "~/components/TextContents.vue"
 
 export default {
-  name: "EditorContent",
-  components: { ContentIntro, ContentAbout }
+  name: "EditorText",
+  components: { TextIntro, TextAbout, TextContents }
 }
 </script>
 
 <style scoped lang="scss">
 @import "~/src/sass/main.scss";
 
-.root-content {
+.root-text {
   position: relative;
   overflow-y: auto;
   overflow-x: hidden;
@@ -26,15 +28,15 @@ export default {
   padding: 0.75rem;
   max-height: 75vh;
 }
-.root-content::-webkit-scrollbar {
+.root-text::-webkit-scrollbar {
   width: 1.2rem;
   background: transparent;
   z-index: $z-neg-first;
 }
-.root-content::-webkit-scrollbar-track {
+.root-text::-webkit-scrollbar-track {
   background: transparent;
 }
-.root-content::-webkit-scrollbar-thumb {
+.root-text::-webkit-scrollbar-thumb {
   width: 1.2rem;
   border: 2px solid $cl-text-secondary;
   border-right: 0px;

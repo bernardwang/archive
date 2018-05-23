@@ -28,7 +28,7 @@
 
 <script>
 export default {
-  name: "ContentIntro"
+  name: "TextIntro"
 }
 </script>
 

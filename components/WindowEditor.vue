@@ -1,7 +1,7 @@
 <template>
   <section class="root-editor u-outline">
     <EditorPanel/>
-    <EditorContent/>
+    <EditorText/>
     <button class="editor-btn editor-btn-down u-outline">
       <img :src="ArrowIcon" class="editor-btn-icon">
     </button>
@@ -13,12 +13,12 @@
 
 <script>
 import EditorPanel from "~/components/EditorPanel.vue"
-import EditorContent from "~/components/EditorContent.vue"
+import EditorText from "~/components/EditorText.vue"
 import ArrowIcon from "~/assets/scroll-arrow3.svg"
 
 export default {
   name: "WindowEditor",
-  components: { EditorPanel, EditorContent },
+  components: { EditorPanel, EditorText },
   data: function() {
     return { ArrowIcon }
   }
