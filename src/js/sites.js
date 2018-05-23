@@ -50,7 +50,7 @@ const sites = [{
   url: "http://archive.bernard.wang/paper",
   date: "2014",
   tech: "HTML, SCSS, JQuery",
-  detail: "I'm not sure exactly how I got the idea for this site, but it was both unpractical and unnecessary. I wanted the text to be entirely print, so I went through the trouble of printing text on a notebook, taking pictures of the notebook, and then using those images AS my site. lol. Of course, I knew it would be impossible to update the text without retaking images, and it would be much much easier to just code a few lines of HTML, but this idea was far more novel and fun. I was just getting interested into web development but it seemed I didnt want to write a website with code.",
+  detail: "I'm not sure exactly how I got the idea for this site, but it was both impractical and unnecessary. I wanted the text to be entirely print, so I went through the trouble of printing text on a notebook, taking pictures of the notebook, and then using those images AS my site. lol. Of course, I knew it would be impossible to update the text without retaking images, and it would be much much easier to just code a few lines of HTML, but this idea was far more novel and fun. I was just getting interested into web development but it seemed I didn't want to write a website with code.",
   ascii: `
 ╔═════════════════════════╗
 ║                         ║

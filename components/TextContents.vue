@@ -53,6 +53,16 @@
           </nuxt-link>
         </li>
       </ul>
+      <ul class="contents-nav-main">
+        <li class="contents-nav-item">
+          <h4 class="contents-nav-num">
+            [3]
+          </h4>
+          <nuxt-link class="contents-nav-link" to="#credit">
+            Credits
+          </nuxt-link>
+        </li>
+      </ul>
     </nav>
   </BannerSection>
 </template>

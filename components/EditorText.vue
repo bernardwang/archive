@@ -4,6 +4,7 @@
     <TextContents/>
     <TextAbout/>
     <TextSites/>
+    <TextCredits/>
   </main>
 </template>
 
@@ -12,10 +13,17 @@ import TextIntro from "~/components/TextIntro.vue"
 import TextContents from "~/components/TextContents.vue"
 import TextAbout from "~/components/TextAbout.vue"
 import TextSites from "~/components/TextSites.vue"
+import TextCredits from "~/components/TextCredits.vue"
 
 export default {
   name: "EditorText",
-  components: { TextIntro, TextContents, TextAbout, TextSites }
+  components: {
+    TextIntro,
+    TextContents,
+    TextAbout,
+    TextSites,
+    TextCredits
+  }
 }
 </script>
 
