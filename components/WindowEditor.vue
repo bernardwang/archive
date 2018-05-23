@@ -17,6 +17,5 @@ export default {
 
 <style scoped lang="scss">
 .root-editor {
-  margin: 1rem;
 }
 </style>

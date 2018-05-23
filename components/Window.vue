@@ -20,8 +20,10 @@ export default {
 
 .root-window {
   position: relative;
-  min-width: 30rem;
   width: 40vw;
+  min-width: 30rem;
+  padding: 0.75rem;
+  padding-top: 0;
   background-color: $cl-white;
 
   &:before {
@@ -29,8 +31,8 @@ export default {
     position: absolute;
     width: 100%;
     height: 100%;
-    top: 0.8rem;
-    left: 0.8rem;
+    top: 1rem;
+    left: 1rem;
     background-color: $cl-text-secondary;
     z-index: $z-neg-first;
   }
