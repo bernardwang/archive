@@ -53,24 +53,43 @@ export default {
   justify-content: flex-start;
 }
 .bar-squiggle {
-  height: 25px;
+  height: 23px;
 }
 .bar-actions {
   display: flex;
   justify-content: flex-end;
 }
 .bar-btn {
-  width: 35px;
-  height: 35px;
+  width: 30px;
+  height: 30px;
   margin-left: 2px;
-  padding: 0;
-  padding-bottom: 6px;
+  padding: 4px;
   border: none;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
+  background-color: $cl-white;
+
+  //&:before {
+  //  content: "";
+  //  position: absolute;
+  //  width: 100%;
+  //  height: 100%;
+  //  top: 0;
+  //  left: 0;
+  //  transform: translate(3px, 3px);
+  //  background-color: $cl-text-secondary;
+  //  z-index: $z-neg-first;
+  //  @extend .u-outline;
+  //}
+
+  //&:hover {
+  //  z-index: $z-first;
+  //  transform: translate(-3px, -3px);
+  //}
 }
 .bar-btn-icon {
+  width: 100%;
 }
 </style>

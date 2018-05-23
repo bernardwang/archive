@@ -19,7 +19,7 @@
         <img :src="ArrowIcon" class="panel-icon">
       </button>
       <button class="panel-btn">
-        <img :src="ArrowIcon" class="panel-icon panel-right-arrow">
+        <img :src="ArrowIcon" class="panel-icon panel-rev-arrow">
       </button>
     </div>
     <div class="panel-btns">
@@ -79,6 +79,7 @@ export default {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: $cl-white;
 
   &:hover {
     @extend .u-outline;
@@ -87,7 +88,7 @@ export default {
 .panel-icon {
   width: 100%;
 }
-.panel-right-arrow {
+.panel-rev-arrow {
   transform: rotate(180deg);
 }
 </style>

@@ -1,7 +1,6 @@
 const webpack = require("webpack")
 
 module.exports = {
-  mode: "spa",
   /*
   ** Headers of the page
   */
