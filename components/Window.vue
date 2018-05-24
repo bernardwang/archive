@@ -22,12 +22,10 @@ export default {
   position: relative;
   width: 40rem;
   padding: 0.75rem;
-  padding-top: 0;
+  margin: -0.5rem 0 0 -0.5rem;
   background-color: $cl-white;
 
   @include breakpoint(medium) {
-    margin-top: -0.5rem;
-    margin-left: -0.5rem;
     width: calc(100vw - 3rem);
     height: calc(100vh - 3rem);
   }

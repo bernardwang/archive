@@ -2,23 +2,24 @@
   <section class="root-editor u-outline">
     <EditorPanel/>
     <EditorText/>
-    <button class="editor-btn editor-btn-down u-outline">
-      <img :src="ArrowIcon" class="editor-btn-icon">
-    </button>
-    <button class="editor-btn editor-btn-up u-outline">
-      <img :src="ArrowIcon" class="editor-btn-icon editor-rev-arrow">
-    </button>
+    <Button variant="outline" label="Scroll Down" class="editor-btn editor-btn-down">
+      <img :src="ArrowIcon" class="editor-btn-icon" alt>
+    </Button>
+    <Button variant="outline" label="Scroll Up" class="editor-btn editor-btn-up">
+      <img :src="ArrowIcon" class="editor-btn-icon editor-rev-arrow" alt>
+    </Button>
   </section>
 </template>
 
 <script>
+import Button from "~/components/core/Button"
 import EditorPanel from "~/components/EditorPanel.vue"
 import EditorText from "~/components/EditorText.vue"
 import ArrowIcon from "~/assets/scroll-arrow3.svg"
 
 export default {
   name: "WindowEditor",
-  components: { EditorPanel, EditorText },
+  components: { Button, EditorPanel, EditorText },
   data: function() {
     return { ArrowIcon }
   }
@@ -31,20 +32,12 @@ export default {
 .root-editor {
   position: relative;
 }
-.editor-btn {
+.root-editor .editor-btn {
   z-index: $z-second;
   position: absolute;
   right: 0;
   width: 17px;
   height: 17px;
-  background-color: white;
-  border: 0;
-  padding: 0;
-  border: none;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
 .editor-btn-down {
   top: 29px;

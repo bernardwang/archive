@@ -1,6 +1,6 @@
 <template>
   <header class="root-intro">
-    <pre class="ascii">
+    <pre class="intro-ascii ascii">
                                ,---,
                              ,--.' |      ,--,
               __  ,-.        |  |  :    ,--.'|
@@ -43,5 +43,10 @@ export default {
 .intro-title {
   margin-top: 1rem;
   text-align: center;
+}
+.intro-ascii {
+  @include breakpoint(medium) {
+    font-size: 0.6rem;
+  }
 }
 </style>

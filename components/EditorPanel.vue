@@ -1,42 +1,43 @@
 <template>
   <section class="root-panel u-outline">
     <div class="panel-btns">
-      <button class="panel-btn">
-        <img :src="SquareIcon" class="panel-icon">
-      </button>
-      <button class="panel-btn">
-        <img :src="TriangleIcon" class="panel-icon">
-      </button>
-      <button class="panel-btn">
-        <img :src="CircleIcon" class="panel-icon">
-      </button>
-      <button class="panel-btn">
-        <img :src="SquareIcon" class="panel-icon">
-      </button>
+      <Button class="panel-btn">
+        <img :src="SquareIcon" class="panel-icon" alt>
+      </Button>
+      <Button class="panel-btn">
+        <img :src="TriangleIcon" class="panel-icon" alt>
+      </Button>
+      <Button class="panel-btn">
+        <img :src="CircleIcon" class="panel-icon" alt>
+      </Button>
+      <Button class="panel-btn">
+        <img :src="SquareIcon" class="panel-icon" alt>
+      </Button>
     </div>
     <div class="panel-btns">
-      <button class="panel-btn">
-        <img :src="ArrowIcon" class="panel-icon">
-      </button>
-      <button class="panel-btn">
+      <Button class="panel-btn">
+        <img :src="ArrowIcon" class="panel-icon" alt>
+      </Button>
+      <Button class="panel-btn">
         <img :src="ArrowIcon" class="panel-icon panel-rev-arrow">
-      </button>
+      </Button>
     </div>
     <div class="panel-btns">
-      <button class="panel-btn">
-        <img :src="XIcon" class="panel-icon">
-      </button>
-      <button class="panel-btn">
-        <img :src="SquareIcon" class="panel-icon">
-      </button>
-      <button class="panel-btn">
-        <img :src="CircleIcon" class="panel-icon">
-      </button>
+      <Button class="panel-btn">
+        <img :src="XIcon" class="panel-icon" alt>
+      </Button>
+      <Button class="panel-btn">
+        <img :src="SquareIcon" class="panel-icon" alt>
+      </Button>
+      <Button class="panel-btn">
+        <img :src="CircleIcon" class="panel-icon" alt>
+      </Button>
     </div>
   </section>
 </template>
 
 <script>
+import Button from "~/components/core/Button"
 import SquareIcon from "~/assets/panel-square.svg"
 import TriangleIcon from "~/assets/panel-triangle.svg"
 import CircleIcon from "~/assets/panel-circle.svg"
@@ -45,6 +46,7 @@ import XIcon from "~/assets/panel-x.svg"
 
 export default {
   name: "EditorPanel",
+  components: { Button },
   data: function() {
     return {
       SquareIcon,
@@ -72,15 +74,6 @@ export default {
 .panel-btn {
   width: 27px;
   height: 27px;
-  margin-left: 2px;
-  padding: 0;
-  border: none;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: $cl-white;
-
   &:hover {
     @extend .u-outline;
   }
