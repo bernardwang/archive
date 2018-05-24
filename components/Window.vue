@@ -26,9 +26,10 @@ export default {
   background-color: $cl-white;
 
   @include breakpoint(medium) {
-    padding: 0;
-    width: 95vw;
-    height: 95vh;
+    margin-top: -0.5rem;
+    margin-left: -0.5rem;
+    width: calc(100vw - 3rem);
+    height: calc(100vh - 3rem);
   }
 
   &:before {

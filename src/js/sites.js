@@ -26,7 +26,7 @@ const sites = [{
   title: "V3 - Stars",
   url: "http://archive.bernard.wang/stars",
   date: "2015 - 2017",
-  tech: "HTML, SCSS, Gulp.js, D3.js (lol)",
+  tech: "HTML, SCSS, Gulp.js, D3.js",
   detail: "The initial version of this site was built at the 2015 Boilermake hackathon at Purdue University. The hackathon had issues with the internet from the very beginning, so rather than work on a real hackathon project I started messing with some D3.js examples, eventually creating a starry sky visual that I adapted into a simple website. Aside from the fact that D3 was entirely unnecessary for this visualization and that the site was not at all performant, I had a lot of fun playing with the dynamically generated star effect.",
   ascii: `
 ╔═════════════════════════╗
@@ -50,7 +50,7 @@ const sites = [{
   url: "http://archive.bernard.wang/paper",
   date: "2014",
   tech: "HTML, SCSS, JQuery",
-  detail: "I'm not sure exactly how I got the idea for this site, but it was both impractical and unnecessary. I wanted the text to be entirely print, so I went through the trouble of printing text on a notebook, taking pictures of the notebook, and then using those images AS my site. lol. Of course, I knew it would be impossible to update the text without retaking images, and it would be much much easier to just code a few lines of HTML, but this idea was far more novel and fun. I was just getting interested into web development but it seemed I didn't want to write a website with code.",
+  detail: "I'm not sure exactly how I got the idea for this site, but it was both impractical and unnecessary. I wanted the text to be entirely print, so I went through the trouble of printing text on a notebook, taking pictures of the notebook, and then using those images as my site. Of course, I knew it would be impossible to update the text without retaking images, and it would be much much easier to just code a few lines of HTML, but this idea was far more novel and fun. I was just getting interested into web development but it seemed I didn't want to write a website with code.",
   ascii: `
 ╔═════════════════════════╗
 ║                         ║

@@ -9,7 +9,7 @@
         {{ site.ascii }}
       </pre>
       <p class="article-desc">
-        <a :href="site.url" target="_blank">Visit Site</a><br>
+        <a :href="site.url" target="_blank">Visit Site</a><br><br>
         Date: {{ site.date }} <br>
         Technologies: {{ site.tech }}<br>
       </p>
@@ -53,6 +53,10 @@ export default {
 }
 .article-overview {
   display: flex;
+
+  @include breakpoint(small) {
+    flex-direction: column;
+  }
 }
 .article-map {
   margin-right: 1rem;
@@ -61,5 +65,10 @@ export default {
 }
 .article-desc {
   margin-top: 1.5rem;
+
+  @include breakpoint(small) {
+    margin-top: 0rem;
+    margin-bottom: 1.5rem;
+  }
 }
 </style>

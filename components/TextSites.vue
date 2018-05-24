@@ -1,7 +1,7 @@
 <template>
   <BannerSection id="sites" title="Sites">
     <div class="section-content">
-      <SitesArticle v-for="(site, index) in sites" :key="site.id" :site="site" :index="index"/>
+      <SitesArticle v-for="(site, index) in sites" :key="site.id" :site="site" :index="index" class="content-articles"/>
     </div>
   </BannerSection>
 </template>
@@ -22,4 +22,8 @@ export default {
 
 <style scoped lang="scss">
 @import "~/src/sass/main.scss";
+
+.content-articles:last-child {
+  margin-bottom: 0;
+}
 </style>

@@ -38,7 +38,7 @@ export default {
   padding: 0.75rem;
   height: 75vh;
   @include breakpoint(medium) {
-    height: 84vh;
+    height: calc(100vh - 9rem); // TODO: remove magic number
   }
 }
 .root-text::-webkit-scrollbar {

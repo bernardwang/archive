@@ -16,11 +16,10 @@
  `--`---'            `----'              ---`-'          `----'
     </pre>
     <div class="intro-title">
-      <h1>
-        archive.bernard.wang Version 1.0.1
-      </h1>
       <p>
-        By Bernard Wang A.K.A. XxBEn3rdxX@hotmail.com
+        archive.bernard.wang<br>
+        Version 1.3, Updated 05/08/18<br>
+        by Bernard Wang &lt;Xxbern3rdxX@hotmail.com&gt;
       </p>
     </div>
   </header>
@@ -36,7 +35,7 @@ export default {
 @import "~/src/sass/main.scss";
 
 .root-intro {
-  padding: 3rem 0 3rem 0;
+  padding: 3rem 0 4rem 0;
   display: flex;
   flex-direction: column;
   align-items: center;

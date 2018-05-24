@@ -1,9 +1,9 @@
 <template>
   <section class="root-section">
     <h2 class="section-banner">
-      ===========================================================
+      ========================================================================================================================
       <br>{{ title }}<br>
-      ===========================================================
+      ========================================================================================================================
     </h2>
     <slot/>
   </section>
@@ -25,10 +25,11 @@ export default {
 @import "~/src/sass/main.scss";
 
 .root-section {
-  padding-top: 4rem;
+  padding-bottom: 3rem;
 }
 .section-banner {
-  margin-bottom: 3rem;
+  padding-bottom: 3rem;
   text-align: center;
+  overflow: hidden;
 }
 </style>

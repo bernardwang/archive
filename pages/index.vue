@@ -27,7 +27,8 @@ export default {
 }
 // TODO: remove this temporary hack
 .test {
-  background: $cl-bg-primary;
+  background-image: url("~/assets/dots-pink.svg");
+  background-size: 8px 8px;
   position: absolute;
   width: 100%;
   height: 100%;
