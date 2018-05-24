@@ -27,7 +27,7 @@ export default {
 }
 // TODO: remove this temporary hack
 .test {
-  background-image: url("~/assets/dots-pink.svg");
+  background-image: url("~/static/dots-pink.svg");
   background-size: 8px 8px;
   position: absolute;
   width: 100%;
