@@ -5,15 +5,9 @@
       <img :src="SquiggleLong" class="bar-squiggle" alt>
     </div>
     <div class="bar-actions">
-      <Button variant="outline" label="Hide Window" class="bar-btn">
-        <img :src="HideIcon" class="bar-btn-icon" alt>
-      </Button>
-      <Button variant="outline" label="Expand Window" class="bar-btn">
-        <img :src="ExpandIcon" class="bar-btn-icon" alt>
-      </Button>
-      <Button variant="outline" label="Close Window" class="bar-btn">
-        <img :src="CloseIcon" class="bar-btn-icon" alt>
-      </Button>
+      <Button :iconSrc="HideIcon" anim="large" variant="outline" label="Hide Window" class="bar-btn"/>
+      <Button :iconSrc="ExpandIcon" anim="large" variant="outline" label="Expand Window" class="bar-btn"/>
+      <Button :iconSrc="CloseIcon" anim="large" variant="outline" label="Close Window" class="bar-btn"/>
     </div>
   </section>
 </template>
@@ -56,6 +50,11 @@ export default {
 }
 .bar-squiggle {
   height: 23px;
+  &:first-child {
+    @include breakpoint(small) {
+      display: none;
+    }
+  }
 }
 .bar-actions {
   display: flex;
@@ -66,26 +65,5 @@ export default {
   height: 30px;
   padding: 4px;
   justify-content: flex-end;
-
-  //&:before {
-  //  content: "";
-  //  position: absolute;
-  //  width: 100%;
-  //  height: 100%;
-  //  top: 0;
-  //  left: 0;
-  //  transform: translate(3px, 3px);
-  //  background-color: $cl-text-secondary;
-  //  z-index: $z-neg-first;
-  //  @extend .u-outline;
-  //}
-
-  //&:hover {
-  //  z-index: $z-first;
-  //  transform: translate(-3px, -3px);
-  //}
-}
-.bar-btn-icon {
-  width: 100%;
 }
 </style>

@@ -1,37 +1,19 @@
 <template>
   <section class="root-panel u-outline">
     <div class="panel-btns">
-      <Button class="panel-btn">
-        <img :src="SquareIcon" class="panel-icon" alt>
-      </Button>
-      <Button class="panel-btn">
-        <img :src="TriangleIcon" class="panel-icon" alt>
-      </Button>
-      <Button class="panel-btn">
-        <img :src="CircleIcon" class="panel-icon" alt>
-      </Button>
-      <Button class="panel-btn">
-        <img :src="SquareIcon" class="panel-icon" alt>
-      </Button>
+      <Button :iconSrc="SquareIcon" class="panel-btn"/>
+      <Button :iconSrc="TriangleIcon" class="panel-btn"/>
+      <Button :iconSrc="CircleIcon" class="panel-btn"/>
+      <Button :iconSrc="SquareIcon" class="panel-btn"/>
     </div>
     <div class="panel-btns">
-      <Button class="panel-btn">
-        <img :src="ArrowIcon" class="panel-icon" alt>
-      </Button>
-      <Button class="panel-btn">
-        <img :src="ArrowIcon" class="panel-icon panel-rev-arrow">
-      </Button>
+      <Button :iconSrc="LeftIcon" class="panel-btn"/>
+      <Button :iconSrc="RightIcon" class="panel-btn"/>
     </div>
     <div class="panel-btns">
-      <Button class="panel-btn">
-        <img :src="XIcon" class="panel-icon" alt>
-      </Button>
-      <Button class="panel-btn">
-        <img :src="SquareIcon" class="panel-icon" alt>
-      </Button>
-      <Button class="panel-btn">
-        <img :src="CircleIcon" class="panel-icon" alt>
-      </Button>
+      <Button :iconSrc="XIcon" class="panel-btn"/>
+      <Button :iconSrc="SquareIcon" class="panel-btn"/>
+      <Button :iconSrc="CircleIcon" class="panel-btn"/>
     </div>
   </section>
 </template>
@@ -41,7 +23,8 @@ import Button from "~/components/core/Button"
 import SquareIcon from "~/assets/panel-square.svg"
 import TriangleIcon from "~/assets/panel-triangle.svg"
 import CircleIcon from "~/assets/panel-circle.svg"
-import ArrowIcon from "~/assets/panel-arrow.svg"
+import LeftIcon from "~/assets/panel-left.svg"
+import RightIcon from "~/assets/panel-right.svg"
 import XIcon from "~/assets/panel-x.svg"
 
 export default {
@@ -52,7 +35,8 @@ export default {
       SquareIcon,
       TriangleIcon,
       CircleIcon,
-      ArrowIcon,
+      LeftIcon,
+      RightIcon,
       XIcon
     }
   }
@@ -65,6 +49,7 @@ export default {
 .root-panel {
   display: flex;
   justify-content: flex-start;
+  overflow-x: auto;
 }
 .panel-btns {
   margin-left: 0.3rem;
@@ -72,16 +57,13 @@ export default {
   justify-content: flex-start;
 }
 .panel-btn {
-  width: 27px;
-  height: 27px;
+  width: 25px;
+  height: 25px;
   &:hover {
     @extend .u-outline;
   }
 }
 .panel-icon {
   width: 100%;
-}
-.panel-rev-arrow {
-  transform: rotate(180deg);
 }
 </style>

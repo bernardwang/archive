@@ -1,6 +1,6 @@
 <template>
   <BannerSection id="contents" title="Credits">
-    <footer>
+    <footer class="credits-content section-content">
       <h3>
         You made it!
       </h3>
@@ -27,4 +27,7 @@ export default {
 
 <style scoped lang="scss">
 @import "~/src/sass/main.scss";
+.credits-content {
+  align-items: flex-start;
+}
 </style>

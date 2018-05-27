@@ -1,5 +1,6 @@
 <template>
   <button :class="classObj" :aria-label="label" @click="onClick" >
+    <img v-if="iconSrc !== ''" :src="iconSrc" class="button-icon" alt>
     <slot/>
   </button>
 </template>
@@ -11,17 +12,27 @@ export default {
     "label": {
       type: String,
       required: false,
-      default: ''
+      default: ""
+    },
+    "iconSrc": {
+      type: String,
+      required: false,
+      default: ""
     },
     "variant": {
       type: String,
       required: false,
-      default: ''
+      default: ""
+    },
+    "anim": {
+      type: String,
+      required: false,
+      default: "small"
     },
     "to": {
       type: String,
       required: false,
-      default: '/'
+      default: "/"
     },
     "onClick": {
       type: Function,
@@ -34,6 +45,9 @@ export default {
       return {
         "button": true,
         "variant-outline": this.variant === "outline",
+        "anim-small": this.anim === "small",
+        "anim-med": this.anim === "med",
+        "anim-large": this.anim === "large",
       }
     }
   }
@@ -54,8 +68,36 @@ export default {
   justify-content: center;
   align-items: center;
   background-color: $cl-white;
+  position: relative;
+}
+.anim-small {
+  &:hover, &:focus {
+    @extend .u-outline;
+  }
+  &:active {
+    @extend .u-push-small;
+  }
+}
+.anim-med {
+  &:hover, &:focus {
+    @extend .u-pop-small;
+  }
+  &:active {
+    @extend .u-push-small;
+  }
+}
+.anim-large {
+  &:hover, &:focus {
+    @extend .u-pop-small; // TODO: tweak anim size
+  }
+  &:active {
+    @extend .u-push-large;
+  }
 }
 .variant-outline {
-  @extend .u-outline
+  @extend .u-outline;
+}
+.button-icon {
+  width: 100%;
 }
 </style>

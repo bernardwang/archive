@@ -22,6 +22,7 @@ export default {
   position: relative;
   width: 40rem;
   padding: 0.75rem;
+  padding-top: 0;
   margin: -0.5rem 0 0 -0.5rem;
   background-color: $cl-white;
 
@@ -30,15 +31,10 @@ export default {
     height: calc(100vh - 3rem);
   }
 
+  @extend .u-shadow;
   &:before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
     top: 0.75rem;
     left: 0.75rem;
-    background-color: $cl-text-secondary;
-    z-index: $z-neg-first;
   }
 }
 </style>
