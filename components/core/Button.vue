@@ -69,6 +69,7 @@ export default {
   background-color: $cl-white;
   font-size: 1rem;
   font-weight: bold;
+  color: $cl-black;
 }
 .anim-small {
   &:hover, &:focus {

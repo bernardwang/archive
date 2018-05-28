@@ -45,6 +45,7 @@ export default {
   text-align: center;
 }
 .intro-ascii {
+  font-weight: bold;
   @include bp-down(medium) {
     font-size: 0.6rem;
   }

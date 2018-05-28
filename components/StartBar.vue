@@ -2,7 +2,7 @@
   <div class="root-startbar u-outline">
     <Button :iconSrc="SquiggleLong" class="startbar-start" anim="small" variant="outline"/>
     <transition name="fade">
-      <Button v-if="$store.state.windowStatus === 'hide'" :onClick="hideWindow" anim="med" variant="outline" class="startbar-hidden">
+      <Button v-if="$store.state.windowStatus === 'hide'" :onClick="showWindow" anim="med" variant="outline" class="startbar-hidden">
         archive.txt
       </Button>
     </transition>
@@ -33,7 +33,7 @@ export default {
       CircleIcon,
     }
   },
-  methods: mapActions([ 'hideWindow' ])
+  methods: mapActions([ 'showWindow' ])
 }
 </script>
 

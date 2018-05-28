@@ -15,6 +15,12 @@ const createStore = () => {
       }
     },
     actions: {
+      showWindow (context) {
+        if (context.state.windowStatus === "hide" ||
+            context.state.windowStatus === "close") {
+          context.commit("resetWindow")
+        }
+      },
       hideWindow (context) {
         if (context.state.windowStatus === "hide") {
           context.commit("resetWindow")
