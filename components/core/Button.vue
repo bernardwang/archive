@@ -1,7 +1,7 @@
 <template>
   <button :class="classObj" :aria-label="label" @click="onClick" >
-    <img v-if="iconSrc !== ''" :src="iconSrc" class="button-icon" alt>
     <slot/>
+    <img v-if="iconSrc !== ''" :src="iconSrc" class="button-icon" alt>
   </button>
 </template>
 
@@ -58,8 +58,7 @@ export default {
 @import "~/src/sass/main.scss";
 
 .button {
-  width: 30px;
-  height: 30px;
+  position: relative;
   margin-left: 2px;
   padding: 0;
   border: none;
@@ -68,7 +67,8 @@ export default {
   justify-content: center;
   align-items: center;
   background-color: $cl-white;
-  position: relative;
+  font-size: 1rem;
+  font-weight: bold;
 }
 .anim-small {
   &:hover, &:focus {

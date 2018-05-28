@@ -1,5 +1,5 @@
 <template>
-  <BannerSection id="contents" title="Credits">
+  <BannerSection id="credits" title="Credits">
     <footer class="credits-content section-content">
       <h3>
         You made it!

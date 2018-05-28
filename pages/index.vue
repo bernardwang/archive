@@ -1,15 +1,16 @@
 <template>
   <div id="app" class="app">
     <Window/>
-    <div class="test"/>
+    <StartBar/>
   </div>
 </template>
 
 <script>
 import Window from "~/components/Window.vue"
+import StartBar from "~/components/StartBar.vue"
 
 export default {
-  components: { Window }
+  components: { Window, StartBar }
 }
 </script>
 
@@ -23,6 +24,7 @@ export default {
   justify-content: center;
   align-items: center;
   font-family: $primary-typeface;
+  overflow: hidden;
 
   &:before {
     content: "";

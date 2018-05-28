@@ -34,12 +34,9 @@ export default {
   position: relative;
   overflow-y: auto;
   overflow-x: hidden;
-  margin-top: 1px;
-  padding: 0.75rem;
-  height: 75vh;
-  @include breakpoint(medium) {
-    height: calc(100vh - 10rem); // TODO: remove magic number
-  }
+  margin-top: 2px;
+  padding: 0 0.75rem 0 0.75rem;
+  height: 100%;
 }
 .root-text::-webkit-scrollbar {
   width: 1.2rem;

@@ -5,14 +5,15 @@
       <img :src="SquiggleLong" class="bar-squiggle" alt>
     </div>
     <div class="bar-actions">
-      <Button :iconSrc="HideIcon" anim="large" variant="outline" label="Hide Window" class="bar-btn"/>
-      <Button :iconSrc="ExpandIcon" anim="large" variant="outline" label="Expand Window" class="bar-btn"/>
-      <Button :iconSrc="CloseIcon" anim="large" variant="outline" label="Close Window" class="bar-btn"/>
+      <Button :iconSrc="HideIcon" :onClick="hideWindow" anim="large" variant="outline" label="Hide Window" class="bar-btn"/>
+      <Button :iconSrc="ExpandIcon" :onClick="expandWindow" anim="large" variant="outline" label="Expand Window" class="bar-btn"/>
+      <Button :iconSrc="CloseIcon" :onClick="closeWindow" anim="large" variant="outline" label="Close Window" class="bar-btn"/>
     </div>
   </section>
 </template>
 
 <script>
+import { mapActions } from 'vuex'
 import Button from "~/components/core/Button"
 import SquiggleShort from "~/assets/bar-squiggle1.svg"
 import SquiggleLong from "~/assets/bar-squiggle2.svg"
@@ -31,7 +32,12 @@ export default {
       ExpandIcon,
       CloseIcon
     }
-  }
+  },
+  methods: mapActions([
+    'hideWindow',
+    'expandWindow',
+    'closeWindow'
+  ])
 }
 </script>
 

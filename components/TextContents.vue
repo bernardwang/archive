@@ -25,7 +25,7 @@
             [a]
           </h4>
           <a class="contents-nav-link" @click="scrollTo('#hibiscus')">
-            Hibiscus (2017 - present)
+            V4 - Hibiscus
           </a>
         </li>
         <li class="contents-nav-item">
@@ -33,7 +33,7 @@
             [b]
           </h4>
           <a class="contents-nav-link" @click="scrollTo('#stars')" >
-            Stars (2015 - 2017)
+            V3 - Stars
           </a>
         </li>
         <li class="contents-nav-item">
@@ -41,7 +41,7 @@
             [c]
           </h4>
           <a class="contents-nav-link" @click="scrollTo('#paper')">
-            Paper (2014)
+            V2 - Paper
           </a>
         </li>
         <li class="contents-nav-item">
@@ -49,7 +49,7 @@
             [d]
           </h4>
           <a class="contents-nav-link" @click="scrollTo('#bubble')">
-            Bubble (2013)
+            V1 - Bubble
           </a>
         </li>
       </ul>
@@ -58,7 +58,7 @@
           <h4 class="contents-nav-num">
             [3]
           </h4>
-          <a class="contents-nav-link" @click="scrollTo('#credit')">
+          <a class="contents-nav-link" @click="scrollTo('#credits')">
             Credits
           </a>
         </li>

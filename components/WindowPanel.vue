@@ -28,7 +28,7 @@ import RightIcon from "~/assets/panel-right.svg"
 import XIcon from "~/assets/panel-x.svg"
 
 export default {
-  name: "EditorPanel",
+  name: "WindowPanel",
   components: { Button },
   data: function() {
     return {
