@@ -23,16 +23,15 @@ export default {
   justify-content: center;
   align-items: center;
   font-family: $primary-typeface;
-}
-// TODO: remove this temporary hack
-.test {
-  background-image: url("~/static/dots-pink.svg");
-  background-size: 8px 8px;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  z-index: $z-lowest;
+
+  &:before {
+    content: "";
+    background-image: url("~/static/dots-pink.svg");
+    background-size: 8px 8px;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: $z-lowest;
+  }
 }
 </style>

@@ -28,7 +28,7 @@ export default {
 
   @include breakpoint(medium) {
     width: calc(100vw - 3rem);
-    height: calc(100vh - 3rem);
+    height: calc(100vh - 4rem);
   }
 
   @extend .u-shadow;

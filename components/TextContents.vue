@@ -6,17 +6,17 @@
           <h4 class="contents-nav-num">
             [1]
           </h4>
-          <nuxt-link class="contents-nav-link" to="#about">
+          <a class="contents-nav-link" @click="scrollTo('#about')">
             About
-          </nuxt-link>
+          </a>
         </li>
         <li class="contents-nav-item">
           <h4 class="contents-nav-num">
             [2]
           </h4>
-          <nuxt-link class="contents-nav-link" to="#sites">
+          <a class="contents-nav-link" @click="scrollTo('#sites')">
             Sites
-          </nuxt-link>
+          </a>
         </li>
       </ul>
       <ul class="contents-nav-sub">
@@ -24,33 +24,33 @@
           <h4 class="contents-nav-num">
             [a]
           </h4>
-          <nuxt-link class="contents-nav-link" to="#hibiscus">
+          <a class="contents-nav-link" @click="scrollTo('#hibiscus')">
             Hibiscus (2017 - present)
-          </nuxt-link>
+          </a>
         </li>
         <li class="contents-nav-item">
           <h4 class="contents-nav-num">
             [b]
           </h4>
-          <nuxt-link class="contents-nav-link" to="#stars">
+          <a class="contents-nav-link" @click="scrollTo('#stars')" >
             Stars (2015 - 2017)
-          </nuxt-link>
+          </a>
         </li>
         <li class="contents-nav-item">
           <h4 class="contents-nav-num">
             [c]
           </h4>
-          <nuxt-link class="contents-nav-link" to="#paper">
+          <a class="contents-nav-link" @click="scrollTo('#paper')">
             Paper (2014)
-          </nuxt-link>
+          </a>
         </li>
         <li class="contents-nav-item">
           <h4 class="contents-nav-num">
             [d]
           </h4>
-          <nuxt-link class="contents-nav-link" to="#bubble">
+          <a class="contents-nav-link" @click="scrollTo('#bubble')">
             Bubble (2013)
-          </nuxt-link>
+          </a>
         </li>
       </ul>
       <ul class="contents-nav-main">
@@ -58,9 +58,9 @@
           <h4 class="contents-nav-num">
             [3]
           </h4>
-          <nuxt-link class="contents-nav-link" to="#credit">
+          <a class="contents-nav-link" @click="scrollTo('#credit')">
             Credits
-          </nuxt-link>
+          </a>
         </li>
       </ul>
     </nav>
@@ -72,7 +72,15 @@ import BannerSection from "~/components/BannerSection.vue"
 
 export default {
   name: "TextContents",
-  components: { BannerSection }
+  components: { BannerSection },
+  methods: {
+    scrollTo: function (hash) {
+      const linkElem = document.querySelector(hash)
+      if (linkElem) {
+        linkElem.scrollIntoView({ behavior: 'smooth' })
+      }
+    }
+  }
 }
 </script>
 

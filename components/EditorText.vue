@@ -1,5 +1,5 @@
 <template>
-  <main class="root-text">
+  <main id="text" class="root-text">
     <TextIntro/>
     <TextContents/>
     <TextAbout/>
@@ -38,7 +38,7 @@ export default {
   padding: 0.75rem;
   height: 75vh;
   @include breakpoint(medium) {
-    height: calc(100vh - 9rem); // TODO: remove magic number
+    height: calc(100vh - 10rem); // TODO: remove magic number
   }
 }
 .root-text::-webkit-scrollbar {
@@ -50,7 +50,7 @@ export default {
   background: transparent;
 }
 .root-text::-webkit-scrollbar-thumb {
-  width: 1.2rem;
+  cursor: pointer;
   border: 2px solid $cl-text-secondary;
   border-right: 0px;
 }

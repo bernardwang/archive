@@ -2,8 +2,8 @@
   <section class="root-editor u-outline">
     <EditorPanel/>
     <EditorText/>
-    <Button :iconSrc="UpIcon" variant="outline" anim="med" label="Scroll Down" class="editor-btn editor-btn-down"/>
-    <Button :iconSrc="DownIcon" variant="outline" anim="med" label="Scroll Up" class="editor-btn editor-btn-up"/>
+    <Button :iconSrc="UpIcon" :onClick="scrollUp" variant="outline" anim="med" label="Scroll Up" class="editor-btn editor-btn-up"/>
+    <Button :iconSrc="DownIcon" :onClick="scrollDown" variant="outline" anim="med" label="Scroll Down" class="editor-btn editor-btn-down"/>
   </section>
 </template>
 
@@ -19,6 +19,16 @@ export default {
   components: { Button, EditorPanel, EditorText },
   data: function() {
     return { UpIcon, DownIcon }
+  },
+  methods: {
+    scrollDown: function () {
+      const textElem = document.getElementById("text")
+      textElem.scrollBy({ top: 250, behavior: 'smooth' })
+    },
+    scrollUp: function () {
+      const textElem = document.getElementById("text")
+      textElem.scrollBy({ top: -250, behavior: 'smooth' })
+    }
   }
 }
 </script>
@@ -37,9 +47,9 @@ export default {
   height: 17px;
 }
 .editor-btn-down {
-  top: 27px;
+  bottom: 0;
 }
 .editor-btn-up {
-  bottom: 0;
+  top: 27px;
 }
 </style>
