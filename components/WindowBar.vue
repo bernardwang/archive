@@ -57,7 +57,7 @@ export default {
 .bar-squiggle {
   height: 23px;
   &:first-child {
-    @include breakpoint(small) {
+    @include bp-down(small) {
       display: none;
     }
   }

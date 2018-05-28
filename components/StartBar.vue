@@ -1,25 +1,36 @@
 <template>
   <div class="root-startbar u-outline">
-    <Button :iconSrc="SquiggleShort" anim="small" variant="outline" class="startbar-start"/>
+    <Button :iconSrc="SquiggleLong" class="startbar-start" anim="small" variant="outline"/>
     <transition name="fade">
       <Button v-if="$store.state.windowStatus === 'hide'" :onClick="hideWindow" anim="med" variant="outline" class="startbar-hidden">
         archive.txt
       </Button>
     </transition>
+    <div class="startbar-time u-outline">
+      <img :src="CircleIcon" class="startbar-icon">
+      <img :src="SquareIcon" class="startbar-icon">
+      <img :src="TriangleIcon" class="startbar-icon">
+    </div>
   </div>
 </template>
 
 <script>
 import { mapActions } from 'vuex'
 import Button from "~/components/core/Button.vue"
-import SquiggleShort from "~/assets/bar-squiggle1.svg"
+import SquiggleLong from "~/assets/bar-squiggle2.svg"
+import SquareIcon from "~/assets/panel-square.svg"
+import TriangleIcon from "~/assets/panel-triangle.svg"
+import CircleIcon from "~/assets/panel-circle.svg"
 
 export default {
   name: "StartBar",
   components: { Button },
   data: function() {
     return {
-      SquiggleShort
+      SquiggleLong,
+      SquareIcon,
+      TriangleIcon,
+      CircleIcon,
     }
   },
   methods: mapActions([ 'hideWindow' ])
@@ -40,14 +51,17 @@ export default {
   align-items: center;
   background-color: $cl-white;
 
-  @include breakpoint(small) {
+  @include bp-down(small) {
     display: none;
   }
 }
 .startbar-start {
   height: 100%;
-  padding: 0 1.5rem 0 1.5rem;
+  padding: 0 0.5rem 0 0.5rem;
   margin-right: 0.5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
 }
 .startbar-hidden {
   height: calc(100% - 0.75rem);
@@ -59,5 +73,16 @@ export default {
 .fade-enter, .fade-leave-to {
   transition: opacity 0.3s;
   opacity: 0;
+}
+.startbar-time {
+  padding: 0 0.5rem 0 .5rem;
+  display: flex;
+  justify-content: flex-start;
+  height: 100%;
+  position: absolute;
+  right: 0;
+}
+.startbar-icon {
+  padding: 0 0.25rem 0 0.25rem;
 }
 </style>

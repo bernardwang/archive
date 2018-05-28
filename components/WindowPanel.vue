@@ -1,19 +1,19 @@
 <template>
   <section class="root-panel u-outline">
     <div class="panel-btns">
-      <Button :iconSrc="SquareIcon" class="panel-btn"/>
-      <Button :iconSrc="TriangleIcon" class="panel-btn"/>
-      <Button :iconSrc="CircleIcon" class="panel-btn"/>
-      <Button :iconSrc="SquareIcon" class="panel-btn"/>
+      <Button :iconSrc="SquareIcon" anim="small" class="panel-btn"/>
+      <Button :iconSrc="TriangleIcon" anim="small" class="panel-btn"/>
+      <Button :iconSrc="CircleIcon" anim="small" class="panel-btn"/>
+      <Button :iconSrc="SquareIcon" anim="small" class="panel-btn"/>
     </div>
     <div class="panel-btns">
-      <Button :iconSrc="LeftIcon" class="panel-btn"/>
-      <Button :iconSrc="RightIcon" class="panel-btn"/>
+      <Button :iconSrc="LeftIcon" anim="small" class="panel-btn"/>
+      <Button :iconSrc="RightIcon" anim="small" class="panel-btn"/>
     </div>
     <div class="panel-btns">
-      <Button :iconSrc="XIcon" class="panel-btn"/>
-      <Button :iconSrc="SquareIcon" class="panel-btn"/>
-      <Button :iconSrc="CircleIcon" class="panel-btn"/>
+      <Button :iconSrc="XIcon" anim="small" class="panel-btn"/>
+      <Button :iconSrc="SquareIcon" anim="small" class="panel-btn"/>
+      <Button :iconSrc="CircleIcon" anim="small" class="panel-btn"/>
     </div>
   </section>
 </template>

@@ -1,5 +1,5 @@
 // Breakpoint mixin
-@mixin breakpoint($point) {
+@mixin bp-down($point) {
   @if $point == large {
     @media (max-width: $bp-large) { @content; }
   }
@@ -8,6 +8,17 @@
   }
   @else if $point == small {
     @media (max-width: $bp-small) { @content; }
+  }
+}
+@mixin bp-up($point) {
+  @if $point == large {
+    @media (min-width: $bp-large) { @content; }
+  }
+  @else if $point == medium {
+    @media (min-width: $bp-medium) { @content; }
+  }
+  @else if $point == small {
+    @media (min-width: $bp-small) { @content; }
   }
 }
 

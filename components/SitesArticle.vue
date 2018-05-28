@@ -54,7 +54,7 @@ export default {
 .article-overview {
   display: flex;
 
-  @include breakpoint(small) {
+  @include bp-down(small) {
     flex-direction: column;
   }
 }
@@ -66,7 +66,7 @@ export default {
 .article-desc {
   margin-top: 1.5rem;
 
-  @include breakpoint(small) {
+  @include bp-down(small) {
     margin-top: 0rem;
     margin-bottom: 1.5rem;
   }

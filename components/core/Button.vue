@@ -27,7 +27,7 @@ export default {
     "anim": {
       type: String,
       required: false,
-      default: "small"
+      default: ""
     },
     "to": {
       type: String,

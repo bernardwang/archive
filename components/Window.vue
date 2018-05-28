@@ -41,7 +41,7 @@ export default {
   margin-top: -7vh; // magic number
   background-color: $cl-white;
 
-  @include breakpoint(medium) {
+  @include bp-down(medium) {
     width: calc(100vw - 3rem);
     height: calc(100vh - 6rem); // magic number
   }
@@ -54,24 +54,30 @@ export default {
 }
 
 .hide {
-  z-index: $z-neg-second;
-  opacity: 0;
-  transform: translate(-40vw, 80%) scale(0);
-  @include breakpoint(medium) {
-    transform: translate(-20vw, 80%) scale(0);
-  }
-  transition: transform 0.5s, opacity 0.5s;
-  &:before {
-    content: none;
+  @include bp-up(small) {
+    z-index: $z-neg-second;
+    opacity: 0;
+    transform: translate(-40vw, 80%) scale(0);
+    @include bp-down(medium) {
+      transform: translate(-20vw, 80%) scale(0);
+    }
+    transition: transform 0.4s, opacity 0.4s;
+    &:before {
+      content: none;
+    }
   }
 }
 
 .expand {
-  width: calc(100vw - 3rem);
-  height: calc(100vh - 6rem);
+  @include bp-up(small) {
+    width: calc(100vw - 3rem);
+    height: calc(100vh - 6rem);
+  }
 }
 
 .close {
-  display: none;
+  @include bp-up(small) {
+    display: none;
+  }
 }
 </style>

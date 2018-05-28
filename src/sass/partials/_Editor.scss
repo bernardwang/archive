@@ -5,19 +5,18 @@
   flex-direction: column;
   align-items: center;
 
-  @include breakpoint(small) {
+  @include bp-down(small) {
     padding: 0;
   }
 }
 
 .ascii {
   //color: $cl-text-secondary;
-  //font-weight: bold;
   line-height: 0.8;
   letter-spacing: -1px;
   word-spacing: 0px;
   font-size: 1rem;
-  @include breakpoint(medium) {
+  @include bp-down(medium) {
     font-size: 0.8rem;
   }
 }

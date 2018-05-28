@@ -45,7 +45,7 @@ export default {
   text-align: center;
 }
 .intro-ascii {
-  @include breakpoint(medium) {
+  @include bp-down(medium) {
     font-size: 0.6rem;
   }
 }
