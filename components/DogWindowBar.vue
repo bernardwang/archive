@@ -1,43 +1,52 @@
 <template>
   <section class="root-bar">
     <div class="bar-title">
-      <img :src="SquiggleShort" class="bar-squiggle" alt>
-      <img :src="SquiggleLong" class="bar-squiggle" alt>
+      <img :src="squiggle" class="bar-squiggle" alt>
     </div>
     <div class="bar-actions">
-      <Button :iconSrc="HideIcon" :onClick="hideWindow" anim="large" variant="outline" label="Hide Window" class="bar-btn"/>
-      <Button :iconSrc="ExpandIcon" :onClick="expandWindow" anim="large" variant="outline" label="Expand Window" class="bar-btn"/>
-      <Button :iconSrc="CloseIcon" :onClick="closeWindow" anim="large" variant="outline" label="Close Window" class="bar-btn"/>
+      <Button :iconSrc="CloseIcon" :onClick="emitRemoveDog" anim="large" variant="outline" label="Close Window" class="bar-btn"/>
     </div>
   </section>
 </template>
 
 <script>
-import { mapMutations } from 'vuex'
 import Button from "~/components/core/Button"
 import SquiggleShort from "~/assets/bar-squiggle1.svg"
 import SquiggleLong from "~/assets/bar-squiggle2.svg"
-import HideIcon from "~/assets/bar-hide.svg"
-import ExpandIcon from "~/assets/bar-expand.svg"
 import CloseIcon from "~/assets/bar-close.svg"
 
 export default {
-  name: "WindowBar",
+  name: "DogWindowBar",
   components: { Button },
+  props: {
+    "dog": {
+      type: Object,
+      required: true,
+    }
+  },
   data: function() {
     return {
       SquiggleShort,
       SquiggleLong,
-      HideIcon,
-      ExpandIcon,
       CloseIcon
     }
   },
-  methods: mapMutations([
-    'hideWindow',
-    'expandWindow',
-    'closeWindow'
-  ])
+  computed: {
+    squiggle: function () {
+      // TODO: make dynamic
+      console.log(this.dog.squiggleIndex)
+      if (this.dog.squiggleIndex === 0) {
+        return SquiggleShort
+      } else {
+        return SquiggleLong
+      }
+    }
+  },
+  methods: {
+    emitRemoveDog: function () {
+      this.$emit('removeDog')
+    },
+  }
 }
 </script>
 
@@ -45,7 +54,7 @@ export default {
 @import "~/src/sass/main.scss";
 
 .root-bar {
-  padding-bottom: 1.5rem;
+  padding-bottom: 1rem;
   display: flex;
   justify-content: space-between;
 }

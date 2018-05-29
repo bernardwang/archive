@@ -1,48 +1,60 @@
 import Vuex from 'vuex'
+import dogs from "~/src/js/dogs.js"
 
 const createStore = () => {
   return new Vuex.Store({
     state: {
+      dogs: [],
       windowMoved: false,
       windowStatus: "",
     },
     mutations: {
-      resetWindow (state) {
-        state.windowStatus = ""
+      showWindow (state) {
+        if (state.windowStatus === "hide" ||
+            state.windowStatus === "close") {
+          state.windowStatus = ""
+        }
       },
-      setWindow (state, action) {
-        state.windowStatus = action
+      hideWindow (state) {
+        if (state.windowStatus === "hide") {
+          state.windowStatus = ""
+        } else {
+          state.windowStatus = "hide"
+        }
+      },
+      expandWindow (state) {
+        if (state.windowStatus === "expand") {
+          state.windowStatus = ""
+        } else {
+          state.windowStatus = "expand"
+        }
+      },
+      closeWindow (state) {
+        if (state.windowStatus === "close") {
+          state.windowStatus = ""
+        } else {
+          state.windowStatus = "close"
+        }
+      },
+      addDog (state) {
+        const numSquiggle = 2 // TODO: add more squiggle
+        const squiggleIndex = Math.floor((Math.random() * numSquiggle))
+        const asciiIndex = Math.floor((Math.random() * dogs.length))
+
+        state.dogs.push({
+          x: Math.floor((Math.random() * 80)),
+          y: Math.floor((Math.random() * 70)),
+          ascii: dogs[asciiIndex].ascii,
+          squiggleIndex
+        })
+      },
+      removeDog (state, index) {
+        const numDogs = state.dogs.length
+        if (numDogs > 0 && index < numDogs && index >= 0) {
+          state.dogs.splice(index, 1)
+        }
       }
     },
-    actions: {
-      showWindow (context) {
-        if (context.state.windowStatus === "hide" ||
-            context.state.windowStatus === "close") {
-          context.commit("resetWindow")
-        }
-      },
-      hideWindow (context) {
-        if (context.state.windowStatus === "hide") {
-          context.commit("resetWindow")
-        } else {
-          context.commit("setWindow", "hide")
-        }
-      },
-      expandWindow (context) {
-        if (context.state.windowStatus === "expand") {
-          context.commit("resetWindow")
-        } else {
-          context.commit("setWindow", "expand")
-        }
-      },
-      closeWindow (context) {
-        if (context.state.windowStatus === "close") {
-          context.commit("resetWindow")
-        } else {
-          context.commit("setWindow", "close")
-        }
-      }
-    }
   })
 }
 

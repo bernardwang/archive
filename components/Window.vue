@@ -47,10 +47,6 @@ export default {
   }
 
   @extend .u-shadow;
-  &:before {
-    top: 0.75rem;
-    left: 0.75rem;
-  }
 }
 
 .hide {
@@ -62,9 +58,6 @@ export default {
       transform: translate(-20vw, 80%) scale(0);
     }
     transition: transform 0.4s, opacity 0.4s;
-    &:before {
-      content: none;
-    }
   }
 }
 

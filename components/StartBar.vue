@@ -15,7 +15,7 @@
 </template>
 
 <script>
-import { mapActions } from 'vuex'
+import { mapMutations } from 'vuex'
 import Button from "~/components/core/Button.vue"
 import SquiggleLong from "~/assets/bar-squiggle2.svg"
 import SquareIcon from "~/assets/panel-square.svg"
@@ -33,7 +33,7 @@ export default {
       CircleIcon,
     }
   },
-  methods: mapActions([ 'showWindow' ])
+  methods: mapMutations([ 'showWindow' ])
 }
 </script>
 
@@ -50,6 +50,7 @@ export default {
   justify-content: flex-start;
   align-items: center;
   background-color: $cl-white;
+  z-index: $z-highest;
 
   @include bp-down(small) {
     display: none;

@@ -35,7 +35,7 @@ export default {
 .root-scrollbar {
 }
 .root-scrollbar .scrollbar-btn {
-  z-index: $z-second;
+  z-index: $z-first;
   position: absolute;
   right: 0;
   width: 17px;

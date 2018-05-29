@@ -25,7 +25,7 @@ ____
           </figcaption>
         </a>
       </Button>
-      <Button class="desktop-shortcut">
+      <Button :onClick="addDog" class="desktop-shortcut">
         <pre class="shortcut-icon ascii">
    __
  (__()'`;
@@ -37,17 +37,23 @@ ____
         </figcaption>
       </Button>
     </div>
+    <ul>
+      <li v-for="(dog, index) in $store.state.dogs" :key="index">
+        <DogWindow :dog="dog" :index="index" />
+      </li>
+    </ul>
   </div>
 </template>
 
 <script>
-import { mapActions } from 'vuex'
+import { mapMutations } from 'vuex'
 import Button from "~/components/core/Button.vue"
+import DogWindow from "~/components/DogWindow.vue"
 
 export default {
   name: "Desktop",
-  components: { Button },
-  methods: mapActions([ 'showWindow' ])
+  components: { Button, DogWindow },
+  methods: mapMutations([ 'showWindow', 'addDog' ])
 }
 </script>
 
