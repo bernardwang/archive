@@ -50,7 +50,7 @@ export default {
   justify-content: flex-start;
   align-items: center;
   background-color: $cl-white;
-  //z-index: $z-highest;
+  z-index: $z-highest;
 
   @include bp-down(small) {
     display: none;
