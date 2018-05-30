@@ -44,8 +44,8 @@ const createStore = () => {
         state.dogs.push({
           x: Math.floor((Math.random() * 80)),
           y: Math.floor((Math.random() * 70)),
-          ascii: dogAscii[asciiIndex].ascii,
-          squiggleIndex
+          squiggleIndex,
+          ...dogAscii[asciiIndex],
         })
       },
       removeDog (state, index) {

@@ -1,9 +1,12 @@
 <template>
   <section :style="styleObj" class="root-dog u-outline">
     <DogWindowBar :dog="dog" @removeDog="removeDog(index)"/>
-    <pre class="ascii dog-ascii u-outline">
-      {{ dog.ascii }}
-    </pre>
+    <div class="u-outline dog-ascii">
+      <pre class="ascii">
+        {{ dog.ascii }}
+      </pre>
+      <a :href="dog.credit" target="_blank"> Source </a>
+    </div>
   </section>
 </template>
 
