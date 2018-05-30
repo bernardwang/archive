@@ -1,19 +1,7 @@
 <template>
   <header class="root-intro">
-    <pre class="intro-ascii ascii">
-                               ,---,
-                             ,--.' |      ,--,
-              __  ,-.        |  |  :    ,--.'|
-            ,' ,'/ /|        :  :  :    |  |,      .---.
-   ,--.--.  '  | |' | ,---.  :  |  |,--.`--'_    /.  ./|  ,---.
-  /       \ |  |   ,'/     \ |  :  '   |,' ,'| .-' . ' | /     \
- .--.  .-. |'  :  / /    / ' |  |   /' :'  | |/___/ \: |/    /  |
-  \__\/: . .|  | ' .    ' /  '  :  | | ||  | :.   \  ' .    ' / |
-  ," .--.; |;  : | '   ; :__ |  |  ' | :'  : |_\   \   '   ;   /|
- /  /  ,.  ||  , ; '   | '.'||  :  :_:,'|  | '.'\   \  '   |  / |
-;  :   .'   \---'  |   :    :|  | ,'    ;  :    ;\   \ |   :    |
-|  ,     .-./       \   \  / `--''      |  ,   /  '---" \   \  /
- `--`---'            `----'              ---`-'          `----'
+    <pre :class="asciiClass">
+      {{ archive.ascii }}
     </pre>
     <div class="intro-title">
       <p>
@@ -26,8 +14,24 @@
 </template>
 
 <script>
+import archiveAscii from "~/src/js/archiveAscii.js"
+const asciiIndex = Math.floor((Math.random() * archiveAscii.length))
+const archive = archiveAscii[asciiIndex]
+
 export default {
-  name: "TextIntro"
+  name: "TextIntro",
+  data: function () {
+    return { archive }
+  },
+  computed: {
+    asciiClass: function () {
+      return {
+        'ascii': true,
+        'intro-ascii': true,
+        'large-ascii': archive.large,
+      }
+    }
+  }
 }
 </script>
 
@@ -45,9 +49,15 @@ export default {
   text-align: center;
 }
 .intro-ascii {
-  font-weight: bold;
+  line-height: 0.8;
   @include bp-down(medium) {
-    font-size: 0.6rem;
+    font-size: 0.7rem;
   }
+  @include bp-down(small) {
+    font-size: 0.5rem;
+  }
+}
+.large-ascii {
+  font-size: 0.8rem;
 }
 </style>

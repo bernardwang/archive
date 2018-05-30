@@ -1,5 +1,5 @@
 import Vuex from 'vuex'
-import dogs from "~/src/js/dogs.js"
+import dogAscii from "~/src/js/dogAscii.js"
 
 const createStore = () => {
   return new Vuex.Store({
@@ -39,12 +39,12 @@ const createStore = () => {
       addDog (state) {
         const numSquiggle = 2 // TODO: add more squiggle
         const squiggleIndex = Math.floor((Math.random() * numSquiggle))
-        const asciiIndex = Math.floor((Math.random() * dogs.length))
+        const asciiIndex = Math.floor((Math.random() * dogAscii.length))
 
         state.dogs.push({
           x: Math.floor((Math.random() * 80)),
           y: Math.floor((Math.random() * 70)),
-          ascii: dogs[asciiIndex].ascii,
+          ascii: dogAscii[asciiIndex].ascii,
           squiggleIndex
         })
       },
